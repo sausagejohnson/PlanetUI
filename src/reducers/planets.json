@@ -1,0 +1,63 @@
+[
+	{
+		"id":	0,
+		"name": "TOI 700 d",
+		"environment": "Harsh",
+		"resources": [
+			"Gold",
+			"Iron"
+		]
+	},
+	{
+		"id":	1,
+		"name": "K2-72e",
+		"environment": "Mild",
+		"resources": [
+			"Iron",
+			"Water",
+			"Sand"
+		]
+	},
+	{
+		"id":	2,
+		"name": "Kepler-1649c",
+		"environment": "Radioactive",
+		"resources": []
+	},
+	{
+		"id":	3,
+		"name": "TRAPPIST-1d",
+		"environment": "Hot",
+		"resources": [
+			"Iron"
+		]
+	},
+	{
+		"id":	4,
+		"name": "Gliese 1061 c",
+		"environment": "Frozen",
+		"resources": [
+			"Water",
+			"Sand",
+			"Plutonium"
+		]
+	},
+	{
+		"id":	5,
+		"name": "Tau Ceti f",
+		"environment": "Frozen",
+		"resources": [
+			"Copper",
+			"Mercury"
+		]
+	},
+	{
+		"id":	6,
+		"name": "LHS 1140 b",
+		"environment": "Frozen",
+		"resources": [
+			"Uridium",
+			"Coolium"
+		]
+	}
+]
