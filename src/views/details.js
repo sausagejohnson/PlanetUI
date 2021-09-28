@@ -33,7 +33,7 @@ const Details = (props) => {
                         <p className="select-favourite">
                             <div className="control">
                                 <input id="fav-check" type="checkbox" checked={isFavourite} onClick={(control) => {
-                                    dispatch({type: 'SET_A_FAVOURITE', data: {id:selectedPlanet, checked: control.currentTarget.checked}})} 
+                                    dispatch(set_a_favourite( {id:selectedPlanet, checked: control.currentTarget.checked}))} 
                                 }/>
                                 <label for="fav-check">Favourite</label>
                             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { set_selected_planet } from '../actions/actions';
 import { useSelector, useDispatch } from 'react-redux';
 
 const Favourites = () => {
@@ -12,7 +13,9 @@ const Favourites = () => {
         <div className="favourites">
             { favouritePlanets.length > 0 ?
                 favouritePlanets.map( planet => (
-                    <div key={planet.id} className="planet-block" onClick={ () => dispatch({ type: 'SET_SELECTED_PLANET', id:planet.id}) }>{` \u2605 ${planet.name} `}
+                    <div key={planet.id} className="planet-block" onClick={ () => 
+                        dispatch(set_selected_planet(planet.id)) 
+                        }>{` \u2605 ${planet.name} `}
                     </div>
                 ))
                 : <span>No favourites yet.</span>

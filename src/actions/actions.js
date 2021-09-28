@@ -12,15 +12,17 @@ export const set_loaded = () => {
     }
 }
 
-export const set_selected_planet = () => {
+export const set_selected_planet = (id) => {
     return {
-        type: 'SET_SELECTED_PLANET'
+        type: 'SET_SELECTED_PLANET',
+        id: id
     }
 }
 
-export const set_a_favourite = () => {
+export const set_a_favourite = (data) => {
     return {
-        type: 'SET_A_FAVOURITE'
+        type: 'SET_A_FAVOURITE',
+        data: data
     }
 }
 

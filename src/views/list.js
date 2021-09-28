@@ -14,7 +14,8 @@ const List = () => {
                <div className="planet-selection">
                     {
                         planets.map( planet => (
-                            <div key={planet.id} className="planet-block" onClick={ () => dispatch({ type: 'SET_SELECTED_PLANET', id:planet.id}) }>{ planet.name }
+                            <div key={planet.id} className="planet-block" onClick={ () => 
+                            dispatch(set_selected_planet(planet.id)) }>{ planet.name }
                             </div>
                         ))
                     }   
