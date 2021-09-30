@@ -9,7 +9,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'PUMP_FETCHED_DATA':
-            return { ...state, number: action.dataValue }
+            return { ...state, planets: action.data }
         case 'STUFF_PLANETS_IN_STORE':
             return { ...state, planets: action.data }
         case 'SET_LOADING':

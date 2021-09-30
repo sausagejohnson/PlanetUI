@@ -1,7 +1,7 @@
 # PlanetUI
 React Demo UI for selecting your favourite planets.
 
-
+The data for this demo is also located at https://waynejohnson.net/planets so that remote data access can be tested and used.
 
 
 The rest is from the standard Create React App README:

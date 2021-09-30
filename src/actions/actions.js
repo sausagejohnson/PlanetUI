@@ -1,5 +1,14 @@
 import planets from '../reducers/planets.json';
 
+
+export const populate_store_from_remote_data = (data) => {
+    return {
+        type: 'PUMP_FETCHED_DATA',
+        data: data
+    }
+}
+
+
 export const set_loading = () => {
     return {
         type: 'SET_LOADING'
@@ -26,20 +35,23 @@ export const set_a_favourite = (data) => {
     }
 }
 
-export const fetchData = (dispatch) => {
+export const fetchRemoteData = (dispatch) => {
     return (dispatch) => {
-        console.log('Start Fetch');
         dispatch(set_loading());
-        return fetch('https://jsonplaceholder.typicode.com/users')
+        return fetch('https://waynejohnson.net/planets', 
+        { 
+            mode: 'cors', 
+            method: 'GET', 
+            headers: { 
+                'Content-Type': 'text/plain',
+                'Accept': 'application/json'
+            } 
+        })
         .then(response => response.json())
         .then(json => {
-            console.log('Go data. Dispatching to store.');
-            let j = json
-            dispatch({ type: 'PUMP_FETCHED_DATA', 'dataValue': j[0].address.suite})
+            dispatch( populate_store_from_remote_data(json) )
         }).then( () => {
-
             dispatch(set_loaded());
-
         });
     }
     

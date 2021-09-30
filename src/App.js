@@ -5,7 +5,7 @@ import Tab from './components/tab.js';
 import List from './views/list.js';
 import Favourites from './views/favourites.js';
 import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
-import { fetchData, fetchLocalPlanetData } from './actions/actions';
+import { fetchRemoteData, fetchLocalPlanetData } from './actions/actions';
 import LoadIndicator from './components/loadindicator.js';
 
 const App = () => {
@@ -13,8 +13,8 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect( () => { 
-    //dispatch(fetchData())
-    dispatch(fetchLocalPlanetData())
+    dispatch(fetchRemoteData())
+    //dispatch(fetchLocalPlanetData())
   }, [] );
 
   return (
