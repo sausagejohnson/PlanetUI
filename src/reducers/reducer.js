@@ -1,5 +1,4 @@
 const initialState = {
-    number: 0,
     loading: false,
     planets: [],
     selectedPlanet: null,
@@ -25,7 +24,7 @@ const reducer = (state = initialState, action) => {
                 }
             } else { //remove a favourite
                 return {
-                    ...state, favourites: [ ...state.favourites.filter(ids => ids != action.data.id) ]
+                    ...state, favourites: [ ...state.favourites.filter(ids => ids !== action.data.id) ]
                 }
             }
         default:

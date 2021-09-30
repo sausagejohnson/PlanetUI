@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
 import { useDispatch } from 'react-redux';
-import Tab from './components/tab.js';
 import List from './views/list.js';
 import Favourites from './views/favourites.js';
 import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
@@ -15,7 +14,7 @@ const App = () => {
   useEffect( () => { 
     dispatch(fetchRemoteData())
     //dispatch(fetchLocalPlanetData())
-  }, [] );
+  }, [dispatch] );
 
   return (
     <div className="App">
