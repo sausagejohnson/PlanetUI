@@ -8,9 +8,9 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'PUMP_FETCHED_DATA':
+        case 'LOAD_PLANETS_FROM_REMOTE':
             return { ...state, planets: action.data }
-        case 'STUFF_PLANETS_IN_STORE':
+        case 'LOAD_PLANETS_FROM_LOCAL':
             return { ...state, planets: action.data }
         case 'SET_LOADING':
             return { ...state, loading: true }
@@ -19,11 +19,11 @@ const reducer = (state = initialState, action) => {
         case 'SET_SELECTED_PLANET':
             return { ...state, selectedPlanet: action.id }
         case 'SET_A_FAVOURITE':
-            if (action.data.checked){ //add
+            if (action.data.checked){ //add a favourite
                 return { 
                     ...state, favourites: [...state.favourites, action.data.id] 
                 }
-            } else { //remove
+            } else { //remove a favourite
                 return {
                     ...state, favourites: [ ...state.favourites.filter(ids => ids != action.data.id) ]
                 }

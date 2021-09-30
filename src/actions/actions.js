@@ -1,9 +1,16 @@
-import planets from '../reducers/planets.json';
+import local_planets_data from '../reducers/planets.json';
 
 
 export const populate_store_from_remote_data = (data) => {
     return {
-        type: 'PUMP_FETCHED_DATA',
+        type: 'LOAD_PLANETS_FROM_REMOTE',
+        data: data
+    }
+}
+
+export const populate_store_from_local_data = (data) => {
+    return {
+        type: 'LOAD_PLANETS_FROM_LOCAL',
         data: data
     }
 }
@@ -59,10 +66,9 @@ export const fetchRemoteData = (dispatch) => {
 
 export const fetchLocalPlanetData = (dispatch) => {
     return (dispatch) => {
-        console.log('Fetch PLANETS');
         dispatch(set_loading());
         setTimeout(() => {
-            dispatch({ type: 'STUFF_PLANETS_IN_STORE', 'data': planets});
+            dispatch( populate_store_from_local_data(local_planets_data) );
             dispatch(set_loaded());
         }, 2000);
     }
