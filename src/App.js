@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
-import './App.css';
-import { useDispatch } from 'react-redux';
-import List from './views/list.js';
-import Favourites from './views/favourites.js';
 import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { fetchRemoteData, fetchLocalPlanetData } from './actions/actions';
+import ListContainer from './views/list-container.js';
+import Favourites from './views/favourites.js';
 import LoadIndicator from './components/loadindicator.js';
+import './App.css';
 
 const App = () => {
 
@@ -25,7 +25,7 @@ const App = () => {
           <Link to="/list">List</Link>
           <Link to="/favourites">Favourites</Link>  
         </div>
-        <Route path="/list" component={List}></Route>
+        <Route path="/list" component={ListContainer}></Route>
         <Route path="/favourites" component={Favourites}></Route>
         <Redirect to="/list" />
       </Router>

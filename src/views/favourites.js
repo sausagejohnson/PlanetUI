@@ -1,4 +1,3 @@
-import React from 'react';
 import { set_selected_planet } from '../actions/actions';
 import { useSelector, useDispatch } from 'react-redux';
 

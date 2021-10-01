@@ -90,12 +90,12 @@
   visibility: visible;
 }
 
-.list {
+.list-container {
   display: flex;
   align-items: stretch;
 }
 
-.planet-selection, .details {
+.list, .details {
   background-color: #DDD;
   padding: 20px;
   width: 45%;

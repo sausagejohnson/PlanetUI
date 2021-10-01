@@ -1,5 +1,5 @@
-import { set_a_favourite } from '../actions/actions';
 import { useSelector, useDispatch } from 'react-redux';
+import { set_a_favourite } from '../actions/actions';
 
 const Details = (props) => {
 
