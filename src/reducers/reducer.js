@@ -7,9 +7,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'LOAD_PLANETS_FROM_REMOTE':
-            return { ...state, planets: action.data }
-        case 'LOAD_PLANETS_FROM_LOCAL':
+        case 'LOAD_PLANETS_INTO_STORE':
             return { ...state, planets: action.data }
         case 'SET_LOADING':
             return { ...state, loading: true }
