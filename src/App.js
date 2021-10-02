@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
+import {BrowserRouter as Router, Route, NavLink, Redirect} from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchRemoteData, fetchLocalPlanetData } from './actions/actions';
@@ -22,8 +22,8 @@ const App = () => {
       <Router>
         <div className="tabs">
           <LoadIndicator></LoadIndicator>
-          <Link to="/list">List</Link>
-          <Link to="/favourites">Favourites</Link>  
+          <NavLink to="/list" activeClassName="active">List</NavLink>
+          <NavLink to="/favourites" activeClassName="active">Favourites</NavLink>  
         </div>
         <Route path="/list" component={ListContainer}></Route>
         <Route path="/favourites" component={Favourites}></Route>
