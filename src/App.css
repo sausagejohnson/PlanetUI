@@ -151,15 +151,16 @@
   background-color: khaki;
   padding: 5px;
   border-radius: 5px;
+  text-align: center;
 }
 
 .details .resource {
   list-style-type: none;
-  width: max-content;
+  width: 80px;
   margin-bottom: 3px;
 }
 
-.planet-block {
+.planet-item {
   background-color: white;
   border: 1px solid black;
   padding: 5px;
@@ -169,7 +170,11 @@
   margin: 5px auto;
 }
 
-.planet-block:hover {
+.planet-item:hover {
+  background-color: khaki;
+}
+
+.planet-item.active {
   background-color: khaki;
 }
 

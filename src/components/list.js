@@ -7,13 +7,16 @@ const List = () => {
     const dispatch = useDispatch();
 
     const planets = useSelector(state => state.planets);
+    const selectedPlanet = useSelector(state => state.selectedPlanet);
 
     return (
         <div className="list">
             {
                 planets.map( planet => (
                     <PlanetItem key={planet.id} planet={planet} onClick={ () => 
-                        dispatch(set_selected_planet(planet.id)) } >
+                        dispatch(set_selected_planet(planet.id)) } 
+                        active={selectedPlanet && selectedPlanet === planet.id }
+                        >
                     </PlanetItem>
                 ))
             }   

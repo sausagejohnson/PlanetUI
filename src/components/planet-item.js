@@ -1,6 +1,9 @@
 const PlanetItem = (props) => {
+
+    const classes = 'planet-item ' + (props.active ? 'active' : '');
+
     return (
-        <div className="planet-block" onClick={props.onClick}>
+        <div className={classes} onClick={props.onClick}>
             { props.planet.name }
         </div>
     );

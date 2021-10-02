@@ -12,7 +12,7 @@ const Favourites = () => {
         <div className="favourites">
             { favouritePlanets.length > 0 ?
                 favouritePlanets.map( planet => (
-                    <div key={planet.id} className="planet-block" onClick={ () => 
+                    <div key={planet.id} className="planet-item" onClick={ () => 
                         dispatch(set_selected_planet(planet.id)) 
                         }>{` \u2605 ${planet.name} `}
                     </div>
