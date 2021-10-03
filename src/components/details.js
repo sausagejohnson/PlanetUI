@@ -9,7 +9,7 @@ const Details = (props) => {
     const selectedPlanet = useSelector(state => state.selectedPlanet);
     const favourites = useSelector(state => state.favourites);
 
-    const planet = planets[selectedPlanet];
+    const planet = planets.find(p => p.id === selectedPlanet);
 
     const isFavourite = (favourites.filter(i=>i === selectedPlanet).length > 0);
     

@@ -15,7 +15,7 @@ const List = () => {
                 planets.map( planet => (
                     <PlanetItem key={planet.id} planet={planet} onClick={ () => 
                         dispatch(set_selected_planet(planet.id)) } 
-                        active={selectedPlanet && selectedPlanet === planet.id }
+                        active={selectedPlanet === planet.id }
                         >
                     </PlanetItem>
                 ))
